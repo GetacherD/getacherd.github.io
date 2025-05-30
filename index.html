@@ -1,272 +1,243 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Getacher Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Getacher - Superhero Portfolio of an Aircraft Technician and Backend Developer" />
+  <title>Getacher - The Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    /* Base styles */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1);
+  color: #111;
+  overflow-x: hidden;
+}
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #005fa3;
+}
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+/* Layout */
+#page-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Getacher</a></h1>
-						<nav>
-							<a href="./Resume.html">Resume</a>
-							<a href="./licence.html" class="ms-4">Licence</a>
-							<a href="./Resume_cert_aviation.html">Aviation Cert</a>
-							<a href="./Resume_cert_sw.html">Software Cert</a>
-							<a href="./Education.html">Academic</a>
-						</nav>
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 2px solid #00bcd4;
+}
+header h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #00bcd4;
+  text-shadow: 0 0 5px #00bcd4;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  margin: 0 15px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 
-					</header>
+/* Banner */
+#banner {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #00bcd4;
+  margin: 30px 0;
+  position: relative;
+  color: #fff;
+}
+#banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3); /* reduced darkness */
+  border-radius: 20px;
+  z-index: 0;
+}
+#banner .inner {
+  position: relative;
+  z-index: 1;
+}
+.logo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: url('./images/pro.jpeg') center center/cover no-repeat;
+  box-shadow: 0 0 10px #00bcd4;
+  border: 3px solid #00bcd4;
+}
+#banner h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #00bcd4;
+}
+#banner h3 {
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #4dd0e1;
+  text-shadow: 0 0 6px #4dd0e1;
+}
+#banner p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="./Resume.html">Resume</a></li>
-							</ul>
-							<!-- <a href="#" class="close">Close</a> -->
-						</div>
-					</nav>
+/* Sections */
+section.wrapper {
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85); /* lighter background */
+  border-radius: 15px;
+  box-shadow: 0 0 8px #00bcd4;
+}
+section.wrapper h2.major {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00acc1;
+  text-shadow: 0 0 5px #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+article {
+  margin-bottom: 30px;
+}
+article h3 {
+  color: #0097a7;
+  font-size: 1.5rem;
+}
+article p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+a.special {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 15px;
+  background: #00bcd4;
+  color: #000;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #00bcd4;
+  transition: background 0.3s ease;
+}
+a.special:hover {
+  background: #4dd0e1;
+  color: #000;
+  box-shadow: 0 0 12px #4dd0e1;
+}
 
-				<!-- Banner -->
-			
-				
-				</div>
-					<section id="banner" class="container text-center">
-						<div class="inner text-center">
-							<div class="logo text-center" style="width: 250px; height: 250px; background-image: url(./images/pro.jpeg);background-position: center; background-size: cover; border-radius: 125px;"><span class=""></span></div>
-							<h2>Getacher Demisse Mitke </h2>
-							<h3> <br>Aircraft Cabin Maintenace technician 
-								
-							<br> Aircfat Fleet Expert-Cabin</h3>
-							<br>  Backend Developer 
-						</div>
-					</section>
+/* Footer */
+#footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f0f0f0;
+  border-top: 2px solid #00bcd4;
+  color: #555;
+}
+#footer h2.major {
+  color: #0097a7;
+  text-shadow: 0 0 4px #00bcd4;
+  margin-bottom: 20px;
+}
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 300px;
+}
+#footer ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
 
-				
-					<!-- dev ops -->
-					<section id="two" class="wrapper alt spotlight style2">
-						<div class="inner">
-							<a href="#" class="image"><img src="https://wallpapers.com/images/hd/gliding-ethiopian-airlines-plane-fkez92ikd8976r7i.jpg" alt="" /></a>
-							<div class="content">
-								<h2 class="major"> Seat block indicator
-								</h2>
-								<p> This project done for in house use @Ethiopian airlines
-								</p>
-								<a href="https://blockedseatindicator.ethiopianairlines.com/BlockedSeats.html" class="special">visit site</a>
-							</div>
-						</div>
-					</section>
-				<!-- Wrapper -->
-					<section id="wrapper">
+  </style>
+</head>
+<body>
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/3d.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Maze Project </h2>
-											
-										<p>Maze is a SDL 3D Game with C, done as final project for alx foundation course </p> <a class="special" href="https://www.youtube.com/watch?v=pX-ZDzTTlZ4&ab_channel=GetacherDemisse">Demo Video</a> <a href="https://github.com/GetacherD/MazeProject" class="special">Source Code</a>
-									</div>
-								</div>
-							</section>
+  <div id="page-wrapper">
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="https://github.com/GetacherD/alx-backend-specialization_portfolio" class="image"><img src="https://thumbs.dreamstime.com/b/student-passing-online-exam-home-178226782.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Online Exam Website</h2>
-										<p>WebStack Portfolio Project done as final project for ALX backend specialization.
-											Technologies Used
-											<li>Django Rest Framework:- Backend framework. provide API</li>
-											<li>ReactJs:- Frontend framework , consume API and render front end</li>
-											<li>Ubuntu OS</li>
-										</p>
-										<a href="https://github.com/GetacherD/alx-backend-specialization_portfolio" class="special">Source Code</a>
-									</div>
-								</div>
-							</section>
+    <header>
+      <h1>GETACHER D. MITKE</h1>
+      <nav aria-label="Main Navigation">
+        <a href="./Resume.html">Resume</a>
+        <a href="./licence.html">Licence</a>
+        <a href="./Resume_cert_aviation.html">Aviation Cert</a>
+        <a href="./Resume_cert_sw.html">Software Cert</a>
+        <a href="./Education.html">Academic</a>
+      </nav>
+    </header>
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/c_lang.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Low level programming with C</h2>
-										<p>All C programming projects.
-											<li>Variables, loop, functions, debugging</li>
-											<li>Pointers, array, recursion</li>
-											<li>Static/dynamic libraries,memory allocation </li>
-											<li>Function pointers, linked lists, bit manipulation, file IO, hash tables</li>
-											<li>Search algorithm,doubly linked lists, variadic function in C </li>
-										</p>
-										<a href="https://github.com/GetacherD/alx-low_level_programming" class="special">Source Code</a>
-									</div>
-								</div>
-							</section>
-							<!-- dev ops -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/bash.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">system_engineering-devops
-										</h2>
-										<p> All projects on shell, web server configuration, SSH
-											<li>Shell basic/advanced, shell scripting</li>
-											<li>Networking basics</li>
-											<li>SSH, HTTP, SSL </li>
-											<li>Web server configuration management, load balancer, firewall, API</li>
-											<li>Data base replication(load balancing) </li>
-											<li>Web stack debugging</li>
-										</p>
-										<a href="https://github.com/GetacherD/alx-backend-specialization_portfolio" class="special">Source Code</a>
-									</div>
-								</div>
-							</section>
+    <section id="banner">
+      <div class="inner">
+        <div class="logo" role="img" aria-label="Profile photo of Getacher"></div>
+        <h2>Getacher Demisse Mitke</h2>
+        <h3>Aircraft IFE/CABIN Maintenance Technician<br>Aircraft Fleet Expert - IFE/Cabin</h3>
+        <p>Passionate Self-Taught Programmer</p>
+      </div>
+    </section>
 
-							<!-- Python Backend -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/python.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">High level programming with Python/SQL/Javascript</h2>
-										<p>All python programming projects.
-											<li>Variables, loop, conditionals, exception</li>
-											<li>Modules, class, function, data structures</li>
-											<li>Test Driven Development (TDD) </li>
-											<li>Inheritance, object/instance, IO</li>
-											<li>SQL Query, Javascript </li>
-										</p>
-										<a href="https://github.com/GetacherD/alx-higher_level_programming" class="special">Source Code</a>
-									</div>
-								</div>
-							</section>
+    <!-- <section class="wrapper" aria-labelledby="projects">
+      <h2 id="projects" class="major">Superpowers & Projects</h2>
 
-							<!-- dev ops -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ahQFWHb0DmasbQ5PLd0VFoiGu_xBhfKc4eYp70XcVqRXTy_C7FQKyOses5IhSoYO_OY&usqp=CAU" alt="" /></a>
-									<div class="content">
-										<h2 class="major"> Miscelanious 
-										</h2>
-										<p> This project are completed as part of backend specialization
-											<li>Algorithm projects &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/GetacherD/alx-interview">view</a></li> 
-											<li>Caching , i18 (internationalization), queuing with JS &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GetacherD/alx-backend">view</a></li> 
-											<li>Backend Storage - SQL, NoSQL, Redis &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GetacherD/alx-backend-storage">view</a></li>
-											<li>Javascript (ES6), Typescript, NodeJS, unittest in JS &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GetacherD/alx-backend-javascript">view</a></li>
-											<li>Backend Authentication , session, Basic &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GetacherD/alx-backend-user-data">view</a></li>
-											<li>Python async, unittest &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GetacherD/alx-backend-python">view</a></li>
-											<li>Sorting algorithms &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GetacherD/sorting_algorithms">view</a></li>
-											<li>Airbnb Clone project &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GetacherD/AirBnB_clone_v4">view</a></li>
-										</p>
-										<a href="https://blockedseatindicator.ethiopianairlines.com/BlockedSeats.html" class="special">Source Code</a>
-									</div>
-								</div>
-							</section>
+      <article>
+        <h3>Seat Block Indicator</h3>
+        <p>Built for Ethiopian Airlines for internal use, this project highlights my ability to design reliable systems.</p>
+        <a href="https://blockedseatindicator.ethiopianairlines.com/BlockedSeats.html" class="special" target="_blank" rel="noopener">Visit Site</a>
+      </article>
 
-						<!-- Four -->
-							<!-- <section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
-									</ul>
-								</div>
-							</section>
+      <article>
+        <h3>Maze Project</h3>
+        <p>A 3D SDL game created with C as part of my ALX Foundation course final project.</p>
+        <a href="https://www.youtube.com/watch?v=pX-ZDzTTlZ4&ab_channel=GetacherDemisse" class="special" target="_blank" rel="noopener">Demo Video</a>
+        <a href="https://github.com/GetacherD/MazeProject" class="special" target="_blank" rel="noopener">Source Code</a>
+      </article>
 
-					</section> -->
+      <article>
+        <h3>Online Exam Website</h3>
+        <p>Full stack web app using Django REST and React.js as a final project for ALX backend specialization.</p>
+        <a href="https://github.com/GetacherD/alx-backend-specialization_portfolio" class="special" target="_blank" rel="noopener">Source Code</a>
+      </article>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							
-							<!-- <form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form> -->
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Ethiopia <br />
-									Addis Ababa<br />
-								</li>
-								<li class="icon solid fa-phone">(251) 921-941057</li>
-								<li class="icon solid fa-envelope">getacher.d@gmail.com</li>
-								
-								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/getacher-demisse-mitke-1361b4134/">linkedin</a></li>
-								
-							</ul>
-							
-						</div>
-					</section>
+    </section> -->
 
-			</div>
+    <footer id="footer">
+      <h2 class="major">Get in Touch</h2>
+      <ul>
+        <li>Ethiopia, Addis Ababa</li>
+        <li>Phone: (251) 921-941057</li>
+        <li>Email: <a href="mailto:getacher.d@gmail.com">getacher.d@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/getacher-demisse-mitke-1361b4134/" target="_blank" rel="noopener">Getacher Demisse</a></li>
+      </ul>
+    </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  </div>
 
-	</body>
+</body>
 </html>
